@@ -54,6 +54,6 @@ body{
     background-image: url("background_mobile.svg");
   }
   #beehiiv-form {
-    top: 55vh; /* Sube el formulario en móviles */
+    top: 53vh; /* Sube el formulario en móviles */
   }
 }
