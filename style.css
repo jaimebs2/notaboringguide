@@ -1,0 +1,56 @@
+/* =====  BLOQUEA CUALQUIER SCROLL  ===== */
+html, body{
+  margin:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;              /* barras fuera */
+}
+
+/* =====  FONDO: tu slide  ===== */
+body{
+  /* 1. Color base por si tarda en cargar  */
+  background-color:#ffffff;
+
+  /* 2. Tu SVG como fondo que SIEMPRE cabe entero  */
+  background-image:url("background.svg");
+  background-size:contain;      /* visible completo */
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-attachment:fixed;  /* permanece fijo */
+}
+
+/* =====  CENTRA EL FORMULARIO  ===== */
+#beehiiv-form{
+  position: absolute;
+  
+  /* Posición y tamaño relativos al viewport para escalar con el fondo */
+  top: 68vh; /* Posición vertical (ajustable) */
+  left: 52vw; /* Centrado horizontal */
+  transform: translateX(-50%); /* Ajuste fino del centrado horizontal */
+
+  width: 22vw; /* Ancho relativo al viewport (ajustable) */
+  max-width: 420px; /* Mantenemos un máximo para pantallas grandes */
+  min-width: 280px; /* Evita que sea demasiado pequeño en móviles */
+  
+  box-sizing: border-box;
+
+  /* Sin estética de caja */
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Evita que un iframe interno crezca y rompa el diseño */
+#beehiiv-form iframe{
+  width: 100%;
+  height: 100%;
+  max-width: 100% !important;
+}
+
+/* ===== ESTILOS PARA MÓVILES ===== */
+@media (max-width: 768px) {
+  body {
+    background-image: url("background_mobile.svg");
+  }
+}
